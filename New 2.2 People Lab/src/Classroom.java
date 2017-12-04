@@ -11,7 +11,7 @@ public class Classroom
 		this.teacher = teacher;
 	}
 	
-	//sorts the array by last names of students
+	//sorts the array by last names of students and first names because I can.
 	public Person[] sortStudents(Person[] students) 
 	{
 		Person[] sorted = new Person[students.length];
@@ -22,8 +22,8 @@ public class Classroom
 			int i2 = 0;
 			while (i2 < students.length)
 			{
-				String a = students[i].getFamilyName();
-				String b = students[i2].getFamilyName();
+				String a = students[i].getFamilyName() + " " + students[i].getFirstName();
+				String b = students[i2].getFamilyName() + " " + students[i2].getFirstName();
 				//final value of pos shows the greatest index students[i] should be
 				if (a.compareTo(b) < 0)
 				{
