@@ -68,7 +68,7 @@ public class Classroom
 	
 	public String printClass()
 	{
-		String result = this.teacher.toString() + 
+		String result = ((Teacher)this.teacher).toString() + 
 						" \nSubject: " + ((Teacher)this.teacher).getSubject() + 
 						" \nStudents in class:";
 		int i = 0;
