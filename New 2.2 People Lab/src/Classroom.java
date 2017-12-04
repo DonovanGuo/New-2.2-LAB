@@ -11,6 +11,7 @@ public class Classroom
 		this.teacher = teacher;
 	}
 	
+	//sorts the array by last names of students
 	public Person[] sortStudents(Person[] students) 
 	{
 		Person[] sorted = new Person[students.length];
