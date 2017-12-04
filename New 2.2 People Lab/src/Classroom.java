@@ -7,11 +7,11 @@ public class Classroom
 	public Classroom(Person[] students, Person teacher)
 	{
 		
-		this.students = students; //sortStudents(students); 
+		this.students = sortStudents(students); //sortStudents(students); 
 		this.teacher = teacher;
 	}
 	
-	/*public Person[] sortStudents(Person[] students) 
+	public Person[] sortStudents(Person[] students) 
 	{
 		Person[] sorted = new Person[students.length];
 		int pos = students.length - 1;
@@ -23,7 +23,7 @@ public class Classroom
 			{
 				String a = students[i].getFamilyName();
 				String b = students[i2].getFamilyName();
-				if (a.compareTo(b) > 0)
+				if (a.compareTo(b) < 0)
 				{
 					pos--;
 				}
@@ -31,16 +31,20 @@ public class Classroom
 			}
 			if (sorted[pos] == null)
 			{
-				sorted[pos - 1] = students[i];
+				sorted[pos] = students[i];
 			}
 			else
 			{
+				while (sorted[pos] != null)
+				{
+					pos = pos - 1;
+				}
 				sorted[pos] = students[i];
 			}
-			i++;
+			pos = students.length -1;
 		}
 		return sorted;
-	}*/
+	}
 	
 	public String getSubject()
 	{
