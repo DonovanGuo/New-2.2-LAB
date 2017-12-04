@@ -23,6 +23,7 @@ public class Classroom
 			{
 				String a = students[i].getFamilyName();
 				String b = students[i2].getFamilyName();
+				//final value of pos shows the greatest index students[i] should be
 				if (a.compareTo(b) < 0)
 				{
 					pos--;
@@ -33,6 +34,8 @@ public class Classroom
 			{
 				sorted[pos] = students[i];
 			}
+			// In case there is already a stored value in pos, 
+			// we place the next equal value in front b/c pos shows the greatest index student[i] should be;
 			else
 			{
 				while (sorted[pos] != null)
@@ -41,6 +44,7 @@ public class Classroom
 				}
 				sorted[pos] = students[i];
 			}
+			// resetting value of pos for the next students[i]
 			pos = students.length -1;
 		}
 		return sorted;
